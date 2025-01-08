@@ -31,8 +31,11 @@ class NavBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: const LinearGradient(
                       colors: [
                         Color(0xFFC86DD7),
                         Color(0xFF3023AE),
@@ -56,7 +59,7 @@ class NavBar extends StatelessWidget {
                 ),
                 const Text(
                   "Britu",
-                  style: TextStyle(fontSize: 26),
+                  style: TextStyle(color: Colors.purple, fontSize: 26),
                 )
               ],
             ),
