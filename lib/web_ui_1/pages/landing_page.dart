@@ -85,7 +85,7 @@ class SmallChild extends StatelessWidget {
               child: Text("LET'S EXPLORE THE WORLD"),
             ),
             SizedBox(
-              height: 40,
+              height: 30,
             ),
           ],
         ),
