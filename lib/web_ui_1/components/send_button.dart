@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_ux/web_ui_1/components/reponsive_layout.dart';
 
-class SendButton extends StatelessWidget {
-  const SendButton({super.key});
+class SendBtn extends StatelessWidget {
+  const SendBtn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,22 +10,17 @@ class SendButton extends StatelessWidget {
       child: Container(
         height: 40,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0XFF86DD7),
-              Color(0XFF3023AE),
-            ],
-            begin: Alignment.bottomRight,
-            end: Alignment.topLeft,
-          ),
-          borderRadius: BorderRadius.circular(20.0),
-          boxShadow: [
-            BoxShadow(
-                color: Color(0xff6078ae).withOpacity(.3),
-                offset: Offset(0.0, 8.0),
-                blurRadius: 8.0),
-          ],
-        ),
+            gradient: LinearGradient(colors: [
+              Color(0xFFC86DD7),
+              Color(0xFF3023AE),
+            ], begin: Alignment.bottomRight, end: Alignment.topLeft),
+            borderRadius: BorderRadius.circular(20.0),
+            boxShadow: [
+              BoxShadow(
+                  color: Color(0xFF6078ea).withOpacity(.3),
+                  offset: Offset(0.0, 8.0),
+                  blurRadius: 8.0)
+            ]),
         child: Material(
           color: Colors.transparent,
           child: InkWell(
@@ -33,40 +28,38 @@ class SendButton extends StatelessWidget {
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Notify",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: "Monserrat-Bold",
-                        fontSize: ReponsiveLayout.isSmallScreen(context)
-                            ? 12
-                            : ReponsiveLayout.isMediumScreen(context)
-                                ? 12
-                                : 16,
-                        letterSpacing: 1.0),
-                  ),
+                children: <Widget>[
+                  Text("Notify",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: "Montserrat-Bold",
+                          fontSize: ResponsiveLayout.isSmallScreen(context)
+                              ? 12
+                              : ResponsiveLayout.isMediumScreen(context)
+                                  ? 12
+                                  : 16,
+                          letterSpacing: 1.0)),
                   SizedBox(
-                    width: ReponsiveLayout.isSmallScreen(context)
+                    width: ResponsiveLayout.isSmallScreen(context)
                         ? 4
-                        : ReponsiveLayout.isMediumScreen(context)
+                        : ResponsiveLayout.isMediumScreen(context)
                             ? 6
                             : 8,
                   ),
-                  Image.asset(
+                  Image.network(
                     "assets/images/sent.png",
                     color: Colors.white,
-                    width: ReponsiveLayout.isLareScreen(context)
+                    width: ResponsiveLayout.isSmallScreen(context)
                         ? 12
-                        : ReponsiveLayout.isMediumScreen(context)
+                        : ResponsiveLayout.isMediumScreen(context)
                             ? 12
                             : 20,
-                    height: ReponsiveLayout.isSmallScreen(context)
+                    height: ResponsiveLayout.isSmallScreen(context)
                         ? 12
-                        : ReponsiveLayout.isMediumScreen(context)
+                        : ResponsiveLayout.isMediumScreen(context)
                             ? 12
                             : 20,
-                  ),
+                  )
                 ],
               ),
             ),

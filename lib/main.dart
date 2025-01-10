@@ -1,21 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_ux/web_ui_1/pages/landing_page.dart';
 
-import 'web_ui_1/pages/landing_page.dart';
-
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+void main() => runApp(MaterialApp(
+      title: 'Flutter Landing Page',
       debugShowCheckedModeBanner: false,
-      title: "Landing PAge Web",
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LandingPage(),
-    );
-  }
-}
+      home: LandingPage(),
+    ));
